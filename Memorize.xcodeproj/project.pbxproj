@@ -19,6 +19,7 @@
 		BB172B4C2ADAEB30002A5BDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BB172B4E2ADAEB31002A5BDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB172B512ADAEB31002A5BDF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BB172B582ADAEE21002A5BDF /* Notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Notes.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +36,7 @@
 		BB172B3E2ADAEB30002A5BDF = {
 			isa = PBXGroup;
 			children = (
+				BB172B582ADAEE21002A5BDF /* Notes.md */,
 				BB172B492ADAEB30002A5BDF /* Memorize */,
 				BB172B482ADAEB30002A5BDF /* Products */,
 			);
