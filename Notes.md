@@ -1,10 +1,6 @@
 ## Lecture 1
 1. `: View` -> behave like a `View`
     You need to satisfy these claims in order to behave like something. 
-<<<<<<< HEAD
-
-
-=======
     E.g., if you want to behave like a `View`, you need to be able to return some other `View` (hence the `some View`)
     SwiftUI is all about the `View`
     
@@ -15,4 +11,3 @@
 
 3. `@ViewBuilder`
     Turns a "list" of views into "tuple" view.
->>>>>>> 55ec891 ([LECTURE 1] Create new struct for card (CardView). Use ZStack and HStack to show multple cards on the screen.)
