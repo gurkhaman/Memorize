@@ -11,5 +11,3 @@
 
 3. `@ViewBuilder`
     Turns a "list" of views into "tuple" view.
-
-## Lecture 2
