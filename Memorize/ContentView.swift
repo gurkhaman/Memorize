@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    let emojis = ["💀", "🥲", "🙃", "🍫", "🙏", "🥵", "😎", "🥸", "👹", "👺", "🫳", "🫥"]
+    let defaultEmojis = ["💀", "🥲", "🙃", "🍫", "🙏", "🥵", "😎", "🥸", "👹", "👺", "🫳", "🫥"]
     let vehicleEmojis = ["⛴️", "🚃", "🛺", "✈️", "🚲", "🚜", "🚟", "🚋", "🚂", "🚀", "🚁", "🚛"]
     let foodEmojis = ["🌭", "🍒", "🥠", "🍦", "🥦", "🍇", "🫚", "🦐", "🥨", "🧇", "🥜", "🍠"]
+    @State var emojis: [String] = ["💀", "🥲", "🙃", "🍫", "🙏", "🥵", "😎", "🥸", "👹", "👺", "🫳", "🫥"]
     @State var cardCount = 4
-
     var body: some View {
         VStack {
             ScrollView {
                 cards
             }
             Spacer()
-            cardAdjusters
+            themeSelector
         }
         .padding()
     }
@@ -53,6 +53,33 @@ struct ContentView: View {
     }
     var cardAdder: some View {
         cardCountAdjusters(by: 1, symbol: "rectangle.stack.badge.plus.fill")
+    }
+    var themeSelector: some View {
+        HStack {
+            emojiThemeSelector.padding()
+            vehicleThemeSelector.padding()
+            foodThemeSelector.padding()
+        }
+        .imageScale(.large)
+    }
+    func themeChangers(theme: [String], symbol: String, text: String) -> some View {
+        VStack {
+            Button(action: {
+                emojis = theme.shuffled()
+            }, label: {
+                Image(systemName: symbol)
+            })
+            Text(text)
+        }
+    }
+    var emojiThemeSelector: some View {
+        themeChangers(theme: defaultEmojis, symbol: "house", text: "Emoji")
+    }
+    var vehicleThemeSelector: some View {
+        themeChangers(theme: vehicleEmojis, symbol: "car", text: "Vehicle")
+    }
+    var foodThemeSelector: some View {
+        themeChangers(theme: foodEmojis, symbol: "fork.knife", text: "Food")
     }
 }
 
