@@ -11,6 +11,7 @@
 
 3. `@ViewBuilder`
     Turns a "list" of views into "tuple" view.
+    Conditionals, list, local variables only!
     
 ## Lecture 2
 1. Swift is strongly typed
@@ -18,4 +19,7 @@
 
 2. Views are immutable ('self' is immutable)
     Generally the backend of the app will do this.
-    `@State` is a temporary fix for this issue.
+    `@State` is a temporary fix for this issue. Generally used in Demos.
+
+3. `LazyVGrid` takes as less space of possible.
+    Hence when the emojis were invisible, the view got squashed.
