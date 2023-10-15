@@ -12,4 +12,10 @@
 3. `@ViewBuilder`
     Turns a "list" of views into "tuple" view.
     
+## Lecture 2
+1. Swift is strongly typed
+    But it also has type inference. Letting swift do the type inference is a good idea.
 
+2. Views are immutable ('self' is immutable)
+    Generally the backend of the app will do this.
+    `@State` is a temporary fix for this issue.
